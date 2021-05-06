@@ -22,14 +22,16 @@ services:
       - APP_ENV=${APP_ENV}
       - APP_SECRET=24e17c47430bd2044a61c131c1cf6990
       - DATABASE_URL=mysql://${DATABASE_USER}:${DATABASE_PASSWORD}@database:3306/${DATABASE_NAME}?serverVersion=5.7
-    volumes:
-      - ../src:/var/www
+      ports:
+        - '9992:9000'
+      volumes:
+      - ./src:/var/www
 
   nginx-prac:
     build:
       context: ./docker/nginx
     volumes:
-      - ../src:/var/www
+      - ./src:/var/www
       - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./docker/nginx/sites/:/etc/nginx/sites-available
       - ./docker/nginx/conf.d/:/etc/nginx/conf.d
@@ -38,6 +40,12 @@ services:
       - php-fpm-prac
     ports:
       - "8888:80"
+    links:
+      - php
+    volumes_from:
+        - php
+    volumes:
+      - ./logs/nginx/:/var/log/nginx:cached
 
 volumes:
   symfony-example-data:
