@@ -19,18 +19,18 @@ class DefaultController extends AbstractController
     }
 
     /**
-     * @Route("/default/redirect/{name}", name="default2")
+     * @Route("/default2", name="default2")
      */
-    public function routeRedirect($name)
+    public function routeRedirect()
     {
         return $this->redirectToRoute('default-redirect');
     }
 
     /**
-     * @Route("/default/default-redirect/{name}", name="default-redirect")
+     * @Route("/redirect", name="default-redirect")
      */
-    public function index3($name)
+    public function index3()
     {
-        return $this->json(['username' => $name]);
+        return $this->json(['username' => 'hey']);
     }
 }
