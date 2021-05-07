@@ -13,33 +13,19 @@ services:
     volumes:
       - symfony-example-data:/var/lib/mysql
 
-  php-fpm:
+  app:
     build:
-      context: ./docker/php-fpm
+      context: ./docker/php-apache
     depends_on:
       - db
     environment:
       - APP_ENV=${APP_ENV}
       - APP_SECRET=24e17c47430bd2044a61c131c1cf6990
-      - DATABASE_URL=mysql://${DATABASE_USER}:${DATABASE_PASSWORD}@database:3306/${DATABASE_NAME}?serverVersion=5.7
+      - DATABASE_URL=mysql://${DATABASE_USER}:${DATABASE_PASSWORD}@database:3311/${DATABASE_NAME}?serverVersion=5.7
     ports:
-      - '9992:9000'
+      - 84:80
     volumes:
-      - ./src:/var/www
-
-  nginx:
-    build:
-      context: ./docker/nginx
-    depends_on:
-      - php-fpm
-    ports:
-      - "8888:80"
-    links:
-      - php-fpm
-    volumes_from:
-      - php-fpm
-    volumes:
-      - ./logs/nginx/:/var/log/nginx:cached
+      - ./public:/var/www/html/
 
 volumes:
   symfony-example-data:

@@ -1,4 +1,3 @@
-FROM nginx:alpine
-WORKDIR /var/www
-CMD ["nginx"]
-EXPOSE 80
+FROM nginx:latest
+
+COPY nginx.conf /etc/nginx/conf.d/

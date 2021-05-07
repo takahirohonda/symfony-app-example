@@ -1,0 +1,2 @@
+2021/05/07 02:45:26 [emerg] 1#1: "user" directive is not allowed here in /etc/nginx/conf.d/nginx.conf:1
+2021/05/07 02:56:15 [emerg] 1#1: "user" directive is not allowed here in /etc/nginx/conf.d/nginx.conf:1
