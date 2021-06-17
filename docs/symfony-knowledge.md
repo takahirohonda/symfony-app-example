@@ -5,7 +5,7 @@
 1. The browser sends a request to Symfony on the server from the user action.
 2. Symfony create a **Request** object that contains data sent by the user (e.g. form data, url parameters etc.).
 3. Symfony generates a **Response** object using the data of the Request object
-4. Symfony through the server sends back the response to the browser and it display the respoinse to the user
+4. Symfony through the server sends back the response to the browser and it display the response to the user
 
 # (2) MVC in Symfony
 
