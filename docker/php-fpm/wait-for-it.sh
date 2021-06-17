@@ -1,38 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@mydatahack 
-vishnubob
-/
-wait-for-it
-98
-6.5k
-1.8k
-Code
-Issues
-28
-Pull requests
-33
-Actions
-Projects
-Wiki
-Security
-Insights
-wait-for-it/wait-for-it.sh
-@douglas-gibbons
-douglas-gibbons Merge pull request #86 from garethrandall/master
-…
-Latest commit 81b1373 on 23 Aug 2020
- History
- 8 contributors
-@scop@Silex@vishnubob@douglas-gibbons@szczad@iturgeon@garethrandall@fwoelffel
-Executable File  182 lines (170 sloc)  5.1 KB
-  
 #!/usr/bin/env bash
 # Use this script to test if a given TCP host/port are available
 
@@ -215,16 +180,3 @@ if [[ $WAITFORIT_CLI != "" ]]; then
 else
     exit $WAITFORIT_RESULT
 fi
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
