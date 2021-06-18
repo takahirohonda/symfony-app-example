@@ -1,0 +1,11 @@
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Password123
+      MYSQL_DATABASE: symfony
+      MYSQL_USER: test
+      MYSQL_PASSWORD: Password123
+    ports:
+      - "3333:3306"
