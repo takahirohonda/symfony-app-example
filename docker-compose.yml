@@ -2,21 +2,21 @@ version: '3.8'
 
 services:
   database:
-    container_name: wk7database
+    container_name: mdhsymfonydatabase
     image: mysql:8.0
     command: --default-authentication-plugin=mysql_native_password
     environment:
-      MYSQL_ROOT_PASSWORD: Hunter2
-      MYSQL_DATABASE: symfony
-      MYSQL_USER: symfony_web
-      MYSQL_PASSWORD: Hunter2
+      MYSQL_ROOT_PASSWORD: Password123
+      MYSQL_DATABASE: mdhsymfony
+      MYSQL_USER: mdhsymfony
+      MYSQL_PASSWORD: Password123
     ports:
       - '4706:3306'
     volumes:
       - ./mysql:/var/lib/mysql
 
   php:
-    container_name: wk7php
+    container_name: mdhsymfonyphp
     build:
       context: ./
     ports:
@@ -27,7 +27,7 @@ services:
       - database
 
   nginx:
-    container_name: wk7nginx
+    container_name: mdhsymfonynginx
     image: nginx:stable-alpine
     ports:
       - '9080:80'

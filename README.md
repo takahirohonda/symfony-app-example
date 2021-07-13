@@ -14,3 +14,12 @@ docker-compose start
 # This is only when we don't have database.
 php -S 127.0.0.1:8444 -t public
 ```
+# new set up
+
+```bash
+
+docker-compose exec git config --global user.email "you@example.com"
+docker-compose exec git config --global user.name "Your Name"
+docker-compose exec php symfony new .
+```
+
