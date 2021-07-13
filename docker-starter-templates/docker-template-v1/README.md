@@ -2,7 +2,7 @@
 
 ## (1) Getting started
 
-Run docker-compose and go to `http://localhost:8888`.
+Run docker-compose and go to `http://localhost:9080`.
 
 ```bash
 # Depending on where you are

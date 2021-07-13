@@ -10,8 +10,10 @@ docker-compose up --build -d
 composer create-project symfony/skeleton ./app
 cd app
 composer require twig doctrine
+composer require symfony/profiler-pack # Add the symfony debug toolbar
 
 # pattern 2 - if you do this app will not be the part of your git repo. pattern 1 is probably better
+# This will make app folder as submodule.
 docker-compose exec php git config --global user.email 'your.email@whatever.com'
 docker-compose exec php git config --global user.name 'Your Name'
 docker-compose exec php symfony new .
