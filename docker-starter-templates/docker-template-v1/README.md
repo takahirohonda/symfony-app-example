@@ -1,5 +1,6 @@
 # Symfony 5 App Example
 
+Docker container setup in this is WIP... It hasn't quite worked yet.
 ## (1) Getting started
 
 Run docker-compose and go to `http://localhost:9080`.

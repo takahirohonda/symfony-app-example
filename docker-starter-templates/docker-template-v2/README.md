@@ -1,6 +1,6 @@
 # Symfony Docker Template Version 2
 
-This will create docker containers to run Symfony with MySQL. 
+This will create docker containers to run Symfony with MySQL. This template works fine.
 
 ## Get started
 
